@@ -11,6 +11,18 @@ OPS = {
 }
 
 def calculate(expr: str):
+    """
+    Évalue une expression arithmétique simple contenant exactement un opérateur.
+
+    Paramètres:
+        expr (str): Expression à calculer, par exemple "3+4".
+
+    Retour:
+        float: Résultat du calcul.
+
+    Exceptions:
+        ValueError: Si l'expression est vide, que sont format est invalide ou contient des opérandes non numériques.
+    """
     if not expr or not isinstance(expr, str):
         raise ValueError("empty expression")
 
@@ -43,6 +55,20 @@ def calculate(expr: str):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    """
+    Route principale de l'application Flask.
+
+    GET:
+        Affiche la calculatrice avec un champ de résultat vide.
+
+    POST:
+        Récupère l'expression du formulaire, calcule le résultat et l'affiche.
+        En cas d'erreur (expression invalide ou division par zéro), 
+        affiche un message d'erreur.
+
+    Retour:
+        Page HTML 'index.html' avec le résultat du calcul ou un message d'erreur.
+    """
     result = ""
     if request.method == 'POST':
         expression = request.form.get('display', '')
