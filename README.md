@@ -81,9 +81,9 @@ pip install -r requirements.txt
 ---
 
 ## Utilisation
-Dans le dossier principal, lancer l’application avec la commande:
+À la racine du projet, lancer l’application avec la commande:
 ```bash
-python app.py
+python backend/app.py
 ```
 Une adresse sera affichée dans le terminal, comme:
 ```bash

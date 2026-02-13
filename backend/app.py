@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from operators import add, subtract, multiply, divide
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
 OPS = {
     '+': add,
