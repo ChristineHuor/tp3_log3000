@@ -1,4 +1,4 @@
-def add(a,b):
+def add(a, b):
     """
     Additionne deux nombres.
 
@@ -11,7 +11,8 @@ def add(a,b):
     """
     return a + b
 
-def subtract(a,b):
+
+def subtract(a, b):
     """
     Soustrait le premier nombre du deuxième.
 
@@ -24,7 +25,8 @@ def subtract(a,b):
     """
     return b - a
 
-def multiply(a,b):
+
+def multiply(a, b):
     """
     Multiplie deux nombres.
 
@@ -35,9 +37,10 @@ def multiply(a,b):
     Retour:
         float: Le résultat de a ** b.
     """
-    return a ** b
+    return a**b
 
-def divide(a,b):
+
+def divide(a, b):
     """
     Divise le premier nombre par le deuxième.
 
@@ -46,6 +49,6 @@ def divide(a,b):
         b (float): Le diviseur.
 
     Retour:
-        float: Le résultat de a // b.
+        float: Le résultat de a / b.
     """
-    return a // b
+    return a / b
